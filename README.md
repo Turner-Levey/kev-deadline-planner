@@ -14,6 +14,8 @@ Source: https://github.com/Turner-Levey/kev-deadline-planner
 
 Preview image: https://kev-deadline-planner.vercel.app/preview.png
 
+Project notes: https://kev-deadline-planner.vercel.app/about.html
+
 Catalog snapshot: CISA KEV `2026.05.07`, released `2026-05-07T15:36:05.3318Z`, with 1,589 entries.
 
 Sources:

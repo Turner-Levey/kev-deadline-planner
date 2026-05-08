@@ -5,11 +5,13 @@
 Site: https://kev-deadline-planner.vercel.app/
 Source: https://github.com/Turner-Levey/kev-deadline-planner
 Preview image: https://kev-deadline-planner.vercel.app/preview.png
+Project notes: https://kev-deadline-planner.vercel.app/about.html
 IndexNow key file: https://kev-deadline-planner.vercel.app/4f2e8d9c6b7a4f3a9e1c0d8b6a2f4c1e.txt
 
 ## Tool
 
 - [CISA KEV Deadline Planner](https://kev-deadline-planner.vercel.app/): Paste CVEs or scanner output, match the bundled CISA KEV catalog snapshot locally, sort overdue and due-soon items, and export Markdown, CSV, or ICS planning files.
+- [Project notes](https://kev-deadline-planner.vercel.app/about.html): Sources, no-tracking boundaries, and catalog snapshot details.
 
 ## Data Snapshot
 
