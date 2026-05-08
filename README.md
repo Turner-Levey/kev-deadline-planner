@@ -16,6 +16,10 @@ Preview image: https://kev-deadline-planner.vercel.app/preview.png
 
 Project notes: https://kev-deadline-planner.vercel.app/about.html
 
+No-Login Tools listing (pending review): https://nologin.tools/tool/kev-deadline-planner-vercel-app/
+
+No-Login Tools badge (pending verification): https://nologin.tools/badge/kev-deadline-planner-vercel-app/
+
 Catalog snapshot: CISA KEV `2026.05.07`, released `2026-05-07T15:36:05.3318Z`, with 1,589 entries.
 
 Sources:
