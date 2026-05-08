@@ -14,6 +14,8 @@ Source: https://github.com/Turner-Levey/kev-deadline-planner
 
 Preview image: https://kev-deadline-planner.vercel.app/preview.png
 
+![CISA KEV Deadline Planner preview](https://kev-deadline-planner.vercel.app/preview.png)
+
 Project notes: https://kev-deadline-planner.vercel.app/about.html
 
 No-Login Tools listing (pending review): https://nologin.tools/tool/kev-deadline-planner-vercel-app/
