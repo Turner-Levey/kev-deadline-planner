@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CISA KEV Deadline Planner</title>
-    <meta name="description" content="Free no-tracking CISA Known Exploited Vulnerabilities deadline planner. Paste CVEs, match the bundled KEV catalog, sort overdue and due-soon items, and export CSV, Markdown, or ICS planning holds.">
+    <title>CISA KEV / BOD 22-01 Deadline Planner</title>
+    <meta name="description" content="Free no-tracking CISA KEV and BOD 22-01 remediation due-date planner. Paste CVEs, match the bundled Known Exploited Vulnerabilities catalog, sort overdue and due-soon items, and export CSV, Markdown, or ICS planning holds.">
     <meta name="robots" content="index,follow">
     <meta name="nologin-verified" content="kev-deadline-planner-vercel-app">
     <link rel="canonical" href="https://kev-deadline-planner.vercel.app/">
-    <meta property="og:title" content="CISA KEV Deadline Planner">
-    <meta property="og:description" content="Paste CVEs or scanner output, match the CISA KEV catalog snapshot locally, and export a remediation planning queue.">
+    <meta property="og:title" content="CISA KEV / BOD 22-01 Deadline Planner">
+    <meta property="og:description" content="Paste CVEs or scanner output, match the CISA KEV catalog snapshot locally, and export a BOD 22-01 remediation due-date queue.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kev-deadline-planner.vercel.app/">
     <meta property="og:image" content="https://kev-deadline-planner.vercel.app/preview.png">
@@ -23,11 +23,11 @@
         "@graph": [
           {
             "@type": "SoftwareApplication",
-            "name": "CISA KEV Deadline Planner",
+            "name": "CISA KEV / BOD 22-01 Deadline Planner",
             "applicationCategory": "SecurityApplication",
             "operatingSystem": "Any",
             "url": "https://kev-deadline-planner.vercel.app/",
-            "description": "Free no-tracking browser tool for matching pasted CVEs against a bundled CISA Known Exploited Vulnerabilities catalog snapshot and exporting a remediation planning queue.",
+            "description": "Free no-tracking browser tool for matching pasted CVEs against a bundled CISA Known Exploited Vulnerabilities catalog snapshot and exporting a BOD 22-01 remediation due-date planning queue.",
             "offers": {
               "@type": "Offer",
               "price": "0",
@@ -42,15 +42,15 @@
                 "name": "What does this KEV deadline planner do?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "It extracts CVE identifiers from pasted text or scanner CSV, matches them against the bundled CISA Known Exploited Vulnerabilities catalog snapshot, sorts the matched entries by due date and risk flags, and creates CSV, Markdown, and ICS exports."
+                  "text": "It extracts CVE identifiers from pasted text or scanner CSV, matches them against the bundled CISA Known Exploited Vulnerabilities catalog snapshot, sorts the matched entries by due date and risk flags, and creates CSV, Markdown, and ICS exports for remediation planning."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Is this an official CISA tool?",
+                  "name": "Is this an official CISA or BOD 22-01 compliance tool?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "No. It is an unofficial planning worksheet that uses CISA public catalog data. Always verify requirements, applicability, and remediation steps against CISA and vendor sources."
+                  "text": "No. It is an unofficial planning worksheet that uses CISA public catalog data. Always verify BOD 22-01 applicability, requirements, exposure, and remediation steps against CISA and vendor sources."
                 }
               },
               {
@@ -73,8 +73,8 @@
         <div class="mast">
           <div>
             <p class="eyebrow">Unofficial local KEV worksheet</p>
-            <h1 id="page-title">CISA KEV Deadline Planner</h1>
-            <p class="lede">Paste CVEs, scanner CSV, or vuln-management notes. The tool extracts CVE IDs, matches the bundled CISA Known Exploited Vulnerabilities catalog, prioritizes overdue and due-soon entries, and exports a remediation planning queue.</p>
+            <h1 id="page-title">CISA KEV / BOD 22-01 Deadline Planner</h1>
+            <p class="lede">Paste CVEs, scanner CSV, or vuln-management notes. The tool extracts CVE IDs, matches the bundled CISA Known Exploited Vulnerabilities catalog, prioritizes overdue and due-soon entries, and exports a BOD 22-01 remediation due-date queue.</p>
           </div>
           <div class="snapshot" aria-label="Catalog snapshot">
             <span id="catalog-count">0</span>
@@ -157,9 +157,17 @@
           <h2>Use Cases</h2>
           <ul>
             <li>Turn a scanner export into a KEV remediation queue.</li>
-            <li>Find overdue CISA due dates before a weekly security review.</li>
+            <li>Find overdue CISA KEV and BOD 22-01 due dates before a weekly security review.</li>
             <li>Flag known-ransomware-use KEVs for a vulnerability management meeting.</li>
             <li>Copy a compact Markdown queue into a ticket, memo, or change-control note.</li>
+          </ul>
+        </div>
+        <div>
+          <h2>BOD 22-01 Planning</h2>
+          <ul>
+            <li>Use the KEV due date as a planning target, then verify whether BOD 22-01 applies to the system and asset owner.</li>
+            <li>Copy the Markdown memo into a ticket with catalog date, due date, known-ransomware-use flag, and required action text.</li>
+            <li>Export ICS holds for due-soon entries so the remediation owner has calendar pressure before the cutoff.</li>
           </ul>
         </div>
         <div>
@@ -176,7 +184,7 @@
         </div>
         <div>
           <h2>Boundaries</h2>
-          <p>This is an unofficial informational worksheet. It is not CISA affiliation, legal advice, security advice, remediation advice, a scanner, a vulnerability validation service, or a guarantee that a finding applies to your environment.</p>
+          <p>This is an unofficial informational worksheet. It is not CISA affiliation, legal advice, security advice, remediation advice, BOD 22-01 compliance advice, a scanner, a vulnerability validation service, or a guarantee that a finding applies to your environment.</p>
           <p>Data snapshot: <span id="data-release">loading</span>. Verify current status against CISA and vendor instructions before acting.</p>
         </div>
       </section>

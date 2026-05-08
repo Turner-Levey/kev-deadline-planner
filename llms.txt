@@ -1,6 +1,6 @@
-# CISA KEV Deadline Planner
+# CISA KEV / BOD 22-01 Deadline Planner
 
-> Free local-first, no-tracking CISA Known Exploited Vulnerabilities deadline planner for pasted CVEs and scanner output.
+> Free local-first, no-tracking CISA Known Exploited Vulnerabilities and BOD 22-01 due-date planner for pasted CVEs and scanner output.
 
 Site: https://kev-deadline-planner.vercel.app/
 Source: https://github.com/Turner-Levey/kev-deadline-planner
@@ -12,8 +12,8 @@ IndexNow key file: https://kev-deadline-planner.vercel.app/4f2e8d9c6b7a4f3a9e1c0
 
 ## Tool
 
-- [CISA KEV Deadline Planner](https://kev-deadline-planner.vercel.app/): Paste CVEs or scanner output, match the bundled CISA KEV catalog snapshot locally, sort overdue and due-soon items, and export Markdown, CSV, or ICS planning files.
-- [Project notes](https://kev-deadline-planner.vercel.app/about.html): Sources, no-tracking boundaries, and catalog snapshot details.
+- [CISA KEV / BOD 22-01 Deadline Planner](https://kev-deadline-planner.vercel.app/): Paste CVEs or scanner output, match the bundled CISA KEV catalog snapshot locally, sort overdue and due-soon items, and export Markdown, CSV, or ICS planning files.
+- [Project notes](https://kev-deadline-planner.vercel.app/about.html): Sources, BOD 22-01 due-date caveats, no-tracking boundaries, and catalog snapshot details.
 
 ## Data Snapshot
 
@@ -26,5 +26,5 @@ IndexNow key file: https://kev-deadline-planner.vercel.app/4f2e8d9c6b7a4f3a9e1c0
 
 - Runs entirely in the browser.
 - No signup, cookies, analytics, beacons, uploads, browser storage, or external scripts.
-- Unofficial worksheet only; not CISA affiliation, legal advice, security advice, remediation advice, scanner output validation, exploit validation, or environment-specific risk analysis.
-- Verify current CISA catalog entries, product applicability, asset exposure, and vendor remediation instructions before acting.
+- Unofficial worksheet only; not CISA affiliation, legal advice, security advice, remediation advice, BOD 22-01 compliance advice, scanner output validation, exploit validation, or environment-specific risk analysis.
+- Verify current CISA catalog entries, BOD 22-01 applicability, product applicability, asset exposure, and vendor remediation instructions before acting.
