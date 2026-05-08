@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CISA KEV Deadline Planner</title>
+    <meta name="description" content="Free no-tracking CISA Known Exploited Vulnerabilities deadline planner. Paste CVEs, match the bundled KEV catalog, sort overdue and due-soon items, and export CSV, Markdown, or ICS planning holds.">
+    <meta name="robots" content="index,follow">
+    <link rel="canonical" href="https://kev-deadline-planner.vercel.app/">
+    <meta property="og:title" content="CISA KEV Deadline Planner">
+    <meta property="og:description" content="Paste CVEs or scanner output, match the CISA KEV catalog snapshot locally, and export a remediation planning queue.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kev-deadline-planner.vercel.app/">
+    <meta property="og:image" content="https://kev-deadline-planner.vercel.app/preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://kev-deadline-planner.vercel.app/preview.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "CISA KEV Deadline Planner",
+            "applicationCategory": "SecurityApplication",
+            "operatingSystem": "Any",
+            "url": "https://kev-deadline-planner.vercel.app/",
+            "description": "Free no-tracking browser tool for matching pasted CVEs against a bundled CISA Known Exploited Vulnerabilities catalog snapshot and exporting a remediation planning queue.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What does this KEV deadline planner do?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "It extracts CVE identifiers from pasted text or scanner CSV, matches them against the bundled CISA Known Exploited Vulnerabilities catalog snapshot, sorts the matched entries by due date and risk flags, and creates CSV, Markdown, and ICS exports."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is this an official CISA tool?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. It is an unofficial planning worksheet that uses CISA public catalog data. Always verify requirements, applicability, and remediation steps against CISA and vendor sources."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does it upload CVEs or scanner output?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The page runs locally in the browser with a bundled catalog snapshot. It has no signup, cookies, analytics, beacons, uploads, browser storage, or external scripts."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <main class="app">
+      <section class="tool-panel" aria-labelledby="page-title">
+        <div class="mast">
+          <div>
+            <p class="eyebrow">Unofficial local KEV worksheet</p>
+            <h1 id="page-title">CISA KEV Deadline Planner</h1>
+            <p class="lede">Paste CVEs, scanner CSV, or vuln-management notes. The tool extracts CVE IDs, matches the bundled CISA Known Exploited Vulnerabilities catalog, prioritizes overdue and due-soon entries, and exports a remediation planning queue.</p>
+          </div>
+          <div class="snapshot" aria-label="Catalog snapshot">
+            <span id="catalog-count">0</span>
+            <small id="catalog-version">Catalog loading</small>
+          </div>
+        </div>
+
+        <div class="workspace">
+          <form class="inputs" id="kev-form">
+            <label class="field">
+              <span>CVEs or scanner output</span>
+              <textarea id="cve-input" spellcheck="false" aria-label="Paste CVEs or scanner output"></textarea>
+            </label>
+            <div class="grid">
+              <label class="field">
+                <span>Due-soon window</span>
+                <select id="due-window">
+                  <option value="7">7 calendar days</option>
+                  <option value="14">14 calendar days</option>
+                  <option value="30" selected>30 calendar days</option>
+                  <option value="60">60 calendar days</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Queue label</span>
+                <input id="queue-label" type="text" value="External exposure review">
+              </label>
+            </div>
+            <div class="actions">
+              <button type="button" id="load-example">Use sample CVEs</button>
+              <button type="button" id="clear-input">Clear</button>
+            </div>
+          </form>
+
+          <section class="output-panel" aria-labelledby="summary-title">
+            <h2 id="summary-title">Queue Summary</h2>
+            <div class="summary-grid" id="summary-grid"></div>
+            <div class="actions">
+              <button type="button" id="copy-markdown">Copy Markdown</button>
+              <button type="button" id="copy-csv">Copy CSV</button>
+              <button type="button" id="download-csv">Download CSV</button>
+              <button type="button" id="download-ics">Download ICS</button>
+            </div>
+            <textarea id="memo-output" spellcheck="false" aria-label="Generated KEV planning memo"></textarea>
+          </section>
+        </div>
+      </section>
+
+      <section class="table-panel" aria-labelledby="matched-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Matched catalog entries</p>
+            <h2 id="matched-title">Prioritized KEV Queue</h2>
+          </div>
+          <label class="search-field">
+            <span>Filter matches</span>
+            <input id="table-filter" type="search" placeholder="CVE, vendor, product, ransomware">
+          </label>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>CVE</th>
+                <th>Vendor / Product</th>
+                <th>Due Date</th>
+                <th>Status</th>
+                <th>Ransomware</th>
+                <th>Required Action</th>
+              </tr>
+            </thead>
+            <tbody id="results-body"></tbody>
+          </table>
+        </div>
+        <div class="not-found" id="not-found"></div>
+      </section>
+
+      <section class="support-grid">
+        <div>
+          <h2>Use Cases</h2>
+          <ul>
+            <li>Turn a scanner export into a KEV remediation queue.</li>
+            <li>Find overdue CISA due dates before a weekly security review.</li>
+            <li>Flag known-ransomware-use KEVs for a vulnerability management meeting.</li>
+            <li>Copy a compact Markdown queue into a ticket, memo, or change-control note.</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Sources</h2>
+          <ul>
+            <li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" rel="noreferrer">CISA Known Exploited Vulnerabilities Catalog</a></li>
+            <li><a href="https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json" rel="noreferrer">CISA KEV JSON feed</a></li>
+            <li><a href="https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities" rel="noreferrer">CISA BOD 22-01 directive</a></li>
+            <li><a href="https://github.com/cisagov/kev-data" rel="noreferrer">CISA kev-data mirror</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Boundaries</h2>
+          <p>This is an unofficial informational worksheet. It is not CISA affiliation, legal advice, security advice, remediation advice, a scanner, a vulnerability validation service, or a guarantee that a finding applies to your environment.</p>
+          <p>Data snapshot: <span id="data-release">loading</span>. Verify current status against CISA and vendor instructions before acting.</p>
+        </div>
+      </section>
+    </main>
+    <script src="kev-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
