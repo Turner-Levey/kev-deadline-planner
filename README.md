@@ -6,6 +6,7 @@ Free no-tracking browser worksheet for matching pasted CVEs against a bundled CI
 - Matches the bundled CISA KEV catalog snapshot.
 - Sorts matched entries by overdue and due-soon status.
 - Flags entries marked by CISA as known ransomware campaign use.
+- Reports pasted CVEs that are absent from the bundled KEV snapshot instead of performing general CVE lookup.
 - Exports Markdown, CSV, and ICS planning holds.
 - Includes BOD 22-01 caveats so teams verify applicability, exposure, and vendor remediation guidance before treating a due date as a compliance obligation.
 
@@ -34,6 +35,6 @@ Sources:
 - CISA BOD 22-01: https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities
 - CISA kev-data mirror: https://github.com/cisagov/kev-data
 
-The tool runs entirely in the browser with a bundled local catalog file. It has no signup, cookies, analytics, beacons, uploads, browser storage, or external scripts.
+The tool runs entirely in the browser with a bundled local catalog file. It has no signup, cookies, analytics, beacons, uploads, browser storage, or external scripts. CVEs absent from the bundled KEV snapshot are reported as not found rather than checked against general CVE, NVD, scanner, exploit, or vendor databases.
 
 This is an unofficial informational worksheet. It is not CISA affiliation, legal advice, security advice, remediation advice, BOD 22-01 compliance advice, a scanner, a vulnerability validation service, or a guarantee that any finding applies to a specific environment. Verify current CISA catalog data, BOD 22-01 applicability, product applicability, asset exposure, and vendor remediation guidance before acting.

@@ -27,5 +27,6 @@ IndexNow key file: https://kev-deadline-planner.vercel.app/4f2e8d9c6b7a4f3a9e1c0
 
 - Runs entirely in the browser.
 - No signup, cookies, analytics, beacons, uploads, browser storage, or external scripts.
+- CVEs absent from the bundled CISA KEV snapshot are reported as not found; this is not a general CVE lookup service.
 - Unofficial worksheet only; not CISA affiliation, legal advice, security advice, remediation advice, BOD 22-01 compliance advice, scanner output validation, exploit validation, or environment-specific risk analysis.
 - Verify current CISA catalog entries, BOD 22-01 applicability, product applicability, asset exposure, and vendor remediation instructions before acting.
