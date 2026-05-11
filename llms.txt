@@ -7,6 +7,7 @@ Source: https://github.com/Turner-Levey/kev-deadline-planner
 Preview image: https://kev-deadline-planner.vercel.app/preview.png
 Project notes: https://kev-deadline-planner.vercel.app/about.html
 h4cker threat-intelligence tools listing: https://github.com/The-Art-of-Hacking/h4cker/blob/master/cybersecurity-domains/defensive-security/threat-intelligence/tools.md
+Tiny Tool Town listing: https://www.tinytooltown.com/tools/cisa-kev-deadline-planner/
 No-Login Tools listing: https://nologin.tools/tool/kev-deadline-planner-vercel-app/
 No-Login Tools badge: https://nologin.tools/badge/kev-deadline-planner-vercel-app/
 IndexNow key file: https://kev-deadline-planner.vercel.app/4f2e8d9c6b7a4f3a9e1c0d8b6a2f4c1e.txt

@@ -22,6 +22,8 @@ Project notes: https://kev-deadline-planner.vercel.app/about.html
 
 h4cker threat-intelligence tools listing: https://github.com/The-Art-of-Hacking/h4cker/blob/master/cybersecurity-domains/defensive-security/threat-intelligence/tools.md
 
+Tiny Tool Town listing: https://www.tinytooltown.com/tools/cisa-kev-deadline-planner/
+
 No-Login Tools listing (pending review): https://nologin.tools/tool/kev-deadline-planner-vercel-app/
 
 No-Login Tools badge (pending verification): https://nologin.tools/badge/kev-deadline-planner-vercel-app/
