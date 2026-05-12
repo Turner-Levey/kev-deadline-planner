@@ -24,6 +24,8 @@ h4cker threat-intelligence tools listing: https://github.com/The-Art-of-Hacking/
 
 Tiny Tool Town listing: https://www.tinytooltown.com/tools/cisa-kev-deadline-planner/
 
+Awesome Compliance listing: https://github.com/theopenlane/awesome-compliance#open-source-platforms
+
 No-Login Tools listing (pending review): https://nologin.tools/tool/kev-deadline-planner-vercel-app/
 
 No-Login Tools badge (pending verification): https://nologin.tools/badge/kev-deadline-planner-vercel-app/
