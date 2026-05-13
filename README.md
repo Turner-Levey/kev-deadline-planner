@@ -30,7 +30,7 @@ No-Login Tools listing (pending review): https://nologin.tools/tool/kev-deadline
 
 No-Login Tools badge (pending verification): https://nologin.tools/badge/kev-deadline-planner-vercel-app/
 
-Catalog snapshot: CISA KEV `2026.05.08`, released `2026-05-08T17:31:07.6877Z`, with 1,590 entries.
+Catalog snapshot: CISA KEV `2026.05.13`, released `2026-05-13T17:58:37.3518Z`, with 1,590 entries.
 
 Latest snapshot addition: `CVE-2026-42208` for BerriAI LiteLLM, due `2026-05-11`.
 
