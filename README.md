@@ -30,9 +30,9 @@ No-Login Tools listing (pending review): https://nologin.tools/tool/kev-deadline
 
 No-Login Tools badge (pending verification): https://nologin.tools/badge/kev-deadline-planner-vercel-app/
 
-Catalog snapshot: CISA KEV `2026.05.13`, released `2026-05-13T17:58:37.3518Z`, with 1,590 entries.
+Catalog snapshot: CISA KEV `2026.05.14`, released `2026-05-14T16:47:45.3703Z`, with 1,591 entries.
 
-Latest snapshot addition: `CVE-2026-42208` for BerriAI LiteLLM, due `2026-05-11`.
+Latest snapshot addition: `CVE-2026-20182` for Cisco Catalyst SD-WAN, due `2026-05-17`.
 
 Sources:
 
