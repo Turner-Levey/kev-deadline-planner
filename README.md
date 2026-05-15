@@ -30,9 +30,9 @@ No-Login Tools listing (pending review): https://nologin.tools/tool/kev-deadline
 
 No-Login Tools badge (pending verification): https://nologin.tools/badge/kev-deadline-planner-vercel-app/
 
-Catalog snapshot: CISA KEV `2026.05.14`, released `2026-05-14T17:31:13.2397Z`, with 1,591 entries.
+Catalog snapshot: CISA KEV `2026.05.15`, released `2026-05-15T16:55:06.6086Z`, with 1,592 entries.
 
-Latest snapshot addition: `CVE-2026-20182` for Cisco Catalyst SD-WAN, due `2026-05-17`.
+Latest snapshot addition: `CVE-2026-42897` for Microsoft Exchange Server, due `2026-05-29`.
 
 Sources:
 

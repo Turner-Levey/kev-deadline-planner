@@ -7,7 +7,7 @@
   <text x="112" y="352" fill="#5b665f" font-family="Arial, sans-serif" font-size="28" font-weight="700">Paste CVEs, match KEV due dates, export CSV and ICS.</text>
   <rect x="112" y="390" width="260" height="90" rx="14" fill="#e8f5f2" stroke="#8ed3c7" stroke-width="2"/>
   <text x="136" y="426" fill="#5b665f" font-family="Arial, sans-serif" font-size="22" font-weight="800">Catalog snapshot</text>
-  <text x="136" y="462" fill="#134e4a" font-family="Arial, sans-serif" font-size="35" font-weight="900">1,590 KEVs</text>
+  <text x="136" y="462" fill="#134e4a" font-family="Arial, sans-serif" font-size="35" font-weight="900">1,592 KEVs</text>
   <rect x="402" y="390" width="290" height="90" rx="14" fill="#fff7e6" stroke="#f2bd68" stroke-width="2"/>
   <text x="426" y="426" fill="#5b665f" font-family="Arial, sans-serif" font-size="22" font-weight="800">Prioritize</text>
   <text x="426" y="462" fill="#b25e09" font-family="Arial, sans-serif" font-size="35" font-weight="900">Due-soon items</text>
